@@ -855,77 +855,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
 
 
-      // =====================================================
-      // Bottom Navigation
-      // =====================================================
 
-      bottomNavigationBar:
-      BottomNavigationBar(
-
-        backgroundColor:
-        const Color(0xFF181818),
-
-        // بنخلي كل الـ items ظاهرين
-        type: BottomNavigationBarType.fixed,
-
-
-        // لون الـ item المختار
-        selectedItemColor:
-        const Color(0xFF00D084),
-
-
-        // لون الـ items اللي مش مختارة
-        unselectedItemColor:
-        Colors.white70,
-
-
-        // أول صفحة هي Home
-        currentIndex: 0,
-
-
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-
-        selectedFontSize: 9,
-        unselectedFontSize: 9,
-
-
-        // عناصر الـ Bottom Navigation
-        items: const [
-
-          // Home
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            activeIcon:
-            Icon(Icons.home),
-            label: "Home",
-          ),
-
-
-          // To Do
-          BottomNavigationBarItem(
-            icon:
-            Icon(Icons.description_outlined),
-            label: "To Do",
-          ),
-
-
-          // Completed
-          BottomNavigationBarItem(
-            icon:
-            Icon(Icons.fact_check_outlined),
-            label: "Completed",
-          ),
-
-
-          // Profile
-          BottomNavigationBarItem(
-            icon:
-            Icon(Icons.person_outline),
-            label: "Profile",
-          ),
-        ],
-      ),
     );
   }
 }
