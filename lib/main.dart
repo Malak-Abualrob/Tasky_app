@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tasky/screens/main_screen.dart';
 
-import 'screens/home_screen.dart';
 import 'screens/welcome_screen.dart';
 
 void main() {

@@ -166,50 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: const Color(0xFF181818),
 
 
-      // =====================================================
-      // زر إضافة Task جديد
-      // =====================================================
 
-      floatingActionButton:
-      FloatingActionButton.extended(
-
-        // لون زر الإضافة
-        backgroundColor: const Color(0xFF52C070),
-
-
-        // شو بصير لما نضغط على الزر
-        onPressed: () async {
-
-          // بنروح على شاشة إضافة Task
-          await Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (_) => const AddTask(),
-            ),
-          );
-
-
-          // لما نرجع من شاشة الإضافة
-          // بنعيد قراءة التاسكات عشان تظهر الجديدة
-          await loadTasks();
-        },
-
-
-        // علامة + داخل الزر
-        icon: const Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-
-
-        // النص الموجود داخل الزر
-        label: const Text(
-          "Add New Task",
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      ),
 
 
       // =====================================================
@@ -853,7 +810,57 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
+      // =====================================================
+      // زر إضافة Task جديد
+      // =====================================================
 
+      floatingActionButton:
+      FloatingActionButton.extended(
+
+        // لون زر الإضافة
+        backgroundColor: const Color(0xFF52C070),
+
+
+        // شو بصير لما نضغط على الزر
+        onPressed: () async {
+
+          // بنروح على شاشة إضافة Task
+         final bool? result = await Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (_) => const AddTask(),
+            ),
+          );
+          
+          if(result!= null && result==true)
+          {
+          // لما نرجع من شاشة الإضافة
+          // بنعيد قراءة التاسكات عشان تظهر الجديدة
+          await loadTasks();
+
+          }
+
+
+
+
+        },
+
+
+        // علامة + داخل الزر
+        icon: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+
+
+        // النص الموجود داخل الزر
+        label: const Text(
+          "Add New Task",
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
 
 
     );

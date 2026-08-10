@@ -149,7 +149,7 @@ class _AddTaskState extends State<AddTask> {
 
     // بنرجع للشاشة السابقة
     // وهي HomeScreen
-    Navigator.pop(context);
+    Navigator.of(context).pop(true);
   }
 
 
