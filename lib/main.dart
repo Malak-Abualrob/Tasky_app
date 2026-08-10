@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tasky/screens/main_screen.dart';
 
 import 'screens/home_screen.dart';
 import 'screens/welcome_screen.dart';
@@ -45,9 +46,7 @@ class MyApp extends StatelessWidget {
           // إذا الاسم موجود
           if (snapshot.data != null &&
               snapshot.data!.isNotEmpty) {
-            return HomeScreen(
-              name: snapshot.data!,
-            );
+            return MainScreen();
           }
 
           // إذا الاسم غير موجود
