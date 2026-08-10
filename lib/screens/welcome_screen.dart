@@ -104,8 +104,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       // Scaffold هو الهيكل الأساسي للشاشة
       child: Scaffold(
 
-        // لون خلفية التطبيق
-        backgroundColor: const Color(0xFF181818),
+ 
 
 
         // SafeArea بتخلينا نبعد المحتوى عن أشياء زي

@@ -23,6 +23,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
+      theme:ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xFF181818),
+      ),
       debugShowCheckedModeBanner: false,
 
       home: FutureBuilder<String?>(

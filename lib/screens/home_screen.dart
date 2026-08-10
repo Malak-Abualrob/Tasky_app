@@ -163,7 +163,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
 
     return Scaffold(
-      backgroundColor: const Color(0xFF181818),
 
 
 
